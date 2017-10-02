@@ -1,37 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="co.infinum.coordinatorsandbox.MainActivity">
-
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="240dp"
-        android:background="@color/colorPrimary">
-
-    </android.support.v7.widget.Toolbar>
+    android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/avatarView"
-        android:layout_width="120dp"
-        android:layout_height="120dp"/>
-
-    <TextView
-        android:id="@+id/nameView"
-        android:layout_marginBottom="16dp"
-        android:textColor="#fff"
-        android:textSize="24sp"
-        android:text="Domagoj Korman"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/backgroundView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="400dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pepe"/>
 
-</android.support.design.widget.CoordinatorLayout>
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:id="@+id/titleView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="64dp"
+                android:alpha="0"
+                android:text="Domagoj Korman"
+                android:textColor="#fff"
+                android:textSize="20sp"/>
+
+        </android.support.v7.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/avatarView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"/>
+
+        <TextView
+            android:id="@+id/nameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Domagoj Korman"
+            android:textColor="#fff"
+            android:textSize="24sp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</FrameLayout>
